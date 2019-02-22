@@ -1,0 +1,555 @@
+fields:
+-   addTo: -273.15
+    colourRanges:
+    -   background: {
+            b: 255,
+            g: 255,
+            r: 255
+        }
+        foreground: {
+            b: 0,
+            g: 0,
+            r: 0
+        }
+        lower: 30.0
+        upper: 50.0
+    description: Inlet Air Temperature
+    divBy: 100.0
+    gaugeLimitLower: -10.0
+    gaugeLimitUpper: 50.0
+    name: IAT
+    precision: 5
+    type: UINT16
+    unit: °C
+-   addTo: -273.15
+    colourRanges:
+    -   background: {
+            b: 255,
+            g: 255,
+            r: 255
+        }
+        foreground: {
+            b: 0,
+            g: 0,
+            r: 0
+        }
+        lower: 95.0
+        upper: 110.0
+    description: Coolant / Head Temperature
+    divBy: 100.0
+    gaugeLimitLower: -10.0
+    gaugeLimitUpper: 110.0
+    name: CHT
+    precision: 5
+    type: UINT16
+    unit: °C
+- {
+    addTo: 0.0,
+    description: Throttle Position Sensor,
+    divBy: 640.0,
+    name: TPS,
+    type: UINT16,
+    unit: '%'
+}
+- {
+    addTo: 0.0,
+    description: Exhaust Gas Oxygen,
+    divBy: 32768.0,
+    name: EGO,
+    type: UINT16,
+    unit: λ
+}
+- {
+    addTo: 0.0,
+    description: Manifold Absolute Pressure,
+    divBy: 100.0,
+    name: MAP,
+    type: UINT16,
+    unit: kPa
+}
+- {
+    addTo: 0.0,
+    description: Atmospheric Absolute Pressure,
+    divBy: 100.0,
+    name: AAP,
+    type: UINT16,
+    unit: kPa
+}
+- {
+    addTo: 0.0,
+    description: Battery Reference Voltage,
+    divBy: 1000.0,
+    name: BRV,
+    type: UINT16,
+    unit: V
+}
+- {
+    addTo: -273.15,
+    description: Manifold Air Temperature,
+    divBy: 100.0,
+    name: MAT,
+    type: UINT16,
+    unit: °C
+}
+- {
+    addTo: 0.0,
+    description: Exhaust Gas Oxygen 2,
+    divBy: 32768.0,
+    name: EGO2,
+    type: UINT16,
+    unit: λ
+}
+- {
+    addTo: 0.0,
+    description: Intercooler Absolute Pressure,
+    divBy: 100.0,
+    name: IAP,
+    type: UINT16,
+    unit: kPa
+}
+- {
+    addTo: 0.0,
+    description: Mass Air Flow (raw),
+    divBy: 1.0,
+    name: MAF,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Delta MAP kPa/second or similar,
+    divBy: 1.0,
+    name: DMAP,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Delta TPS %/second or similar,
+    divBy: 1.0,
+    name: DTPS,
+    type: SINT16,
+    unit: 'TPS/?'
+}
+- {
+    addTo: 0.0,
+    description: Revolutions Per Minute,
+    divBy: 2.0,
+    name: RPM,
+    type: UINT16,
+    unit: RPM
+}
+- {
+    addTo: 0.0,
+    description: Delta RPM RPM/second or similar),
+    divBy: 1.0,
+    name: DRPM,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Delta Delta RPM or similar,
+    divBy: 1.0,
+    name: DDRPM,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Main Load (lambda and timing),
+    divBy: 512.0,
+    name: LoadMain,
+    type: UINT16,
+    unit: '%'
+}
+- {
+    addTo: 0.0,
+    description: Volumetric Efficiency,
+    divBy: 512.0,
+    name: VEMain,
+    type: UINT16,
+    unit: '%'
+}
+- {
+    addTo: 0.0,
+    description: Integral Commanded Lambda,
+    divBy: 32768.0,
+    name: Lambda,
+    type: UINT16,
+    unit: λ
+}
+- {
+    addTo: 0.0,
+    description: 'Raw intermediate, remove!',
+    divBy: 1.0,
+    name: AirFlow,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Raw intermediate, remove!',
+    divBy: 1.0,
+    name: densityAndFuel,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Raw PW before corrections,
+    divBy: 1250.0,
+    name: BasePW,
+    type: UINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Engine Temperature Enrichment,
+    divBy: 163.84,
+    name: ETE,
+    type: UINT16,
+    unit: '%'
+}
+- {
+    addTo: 0.0,
+    description: Transient Fuel Correction PW,
+    divBy: 1250.0,
+    name: TFCTotal,
+    type: SINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Actual PW of fuel delivery,
+    divBy: 1250.0,
+    name: EffectivePW,
+    type: UINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Injector Dead Time PW,
+    divBy: 1250.0,
+    name: IDT,
+    type: UINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Reference electrical PW,
+    divBy: 1250.0,
+    name: RefPW,
+    type: UINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Ignition timing,
+    divBy: 50.0,
+    name: Advance,
+    type: UINT16,
+    unit: °BTDC
+}
+- {
+    addTo: 0.0,
+    description: Ignition coil dwell period,
+    divBy: 1250.0,
+    name: Dwell,
+    type: UINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Incremented once per log sent,
+    divBy: 1.0,
+    name: tempClock,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: '1+ = that gear, 0 = neutral, -1 = reverse, -128 = error',
+    divBy: 1.0,
+    name: currentGear,
+    type: SINT8,
+    unit: '#'
+}
+-   addTo: 0.0
+    bitFieldNames: [
+        FuelPumpPrime,
+        STAGED_REQUIRED,
+        CALC_FUEL_IGN,
+        FORCE_READING,
+        BENCH_TEST_ON,
+        CoreStatusASpare5,
+        CoreStatusASpare6,
+        CoreStatusASpare7]
+    description: Duplicated, migrate here, remove global var
+    divBy: 1.0
+    name: coreStatusA
+    type: BITS8
+    unit: Bits
+-   addTo: 0.0
+    bitFieldNames: [
+        CombustionSync,
+        CrankSync,
+        CamSync,
+        LAST_TIMESTAMP_VALID,
+        LAST_PERIOD_VALID,
+        LAST_MATCH_VALID,
+        LAST_TPD_VALID,
+        OK_TO_SCHEDULE]
+    description: Various decoder state flags
+    divBy: 1.0
+    name: decoderFlags
+    type: BITS8
+    unit: Bits
+-   addTo: 0.0
+    bitFieldNames: [
+        callsToUISRsFlag,
+        lowVoltageConditionsFlag,
+        decoderSyncLossesFlag,
+        decoderSyncCorrectionsFlag,
+        decoderSyncStateClearsFlag,
+        serialNoiseErrorsFlag,
+        serialFramingErrorsFlag,
+        serialParityErrorsFlag,
+        serialOverrunErrorsFlag,
+        serialEscapePairMismatchesFlag,
+        serialStartsInsideAPacketFlag,
+        serialPacketsOverLengthFlag,
+        serialChecksumMismatchesFlag,
+        serialPacketsUnderLengthFlag,
+        phaseLockedLoopLockLostFlag,
+        selfClockModeEnteredFlag]
+    description: Flags to go with our flaggables struct
+    divBy: 1.0
+    name: flaggableFlags
+    type: BITS16
+    unit: Bits
+- {
+    addTo: 0.0,
+    description: Which input event was last to come in,
+    divBy: 1.0,
+    name: currentEvent,
+    type: UINT8,
+    unit: Bits
+}
+- {
+    addTo: 0.0,
+    description: The unique ID for the reason behind the last loss of sync,
+    divBy: 1.0,
+    name: syncLostWithThisID,
+    type: UINT8,
+    unit: ID
+}
+- {
+    addTo: 0.0,
+    description: Where in the input pattern it all went very badly wrong,
+    divBy: 1.0,
+    name: syncLostOnThisEvent,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Where in the input pattern things started making sense,
+    divBy: 1.0,
+    name: syncCaughtOnThisEvent,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Sum of losses, corrections and state clears',
+    divBy: 1.0,
+    name: syncResetCalls,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Free running counter of input events, useful at lower RPM',
+    divBy: 1.0,
+    name: primaryTeethSeen,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Free running counter of input events, useful at lower RPM',
+    divBy: 1.0,
+    name: secondaryTeethSeen,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Number of serial overruns that occurred due to high ISR load, a
+        fact of life at high RPM',
+    divBy: 1.0,
+    name: serialOverrunErrors,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Sum of noise, parity, and framing errors',
+    divBy: 1.0,
+    name: serialHardwareErrors,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Sum of checksum, escape mismatches, starts inside, and over/under
+        length',
+    divBy: 1.0,
+    name: serialAndCommsCodeErrors,
+    type: UINT8,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Required to tune noise rejection over RPM TODO add to LT1 and MissingTeeth,
+    divBy: 1.0,
+    name: inputEventTimeTolerance,
+    type: UINT16,
+    unit: '#'
+}
+-   addTo: 0.0
+    bitFieldNames: [
+        spuriousInterruptsFlag,
+        unimplementedOpcodesFlag,
+        RAMAccessViolationsFlag,
+        XGATESoftwareErrorsFlag,
+        FlaggableFlags2Spare4Flag,
+        FlaggableFlags2Spare5Flag,
+        FlaggableFlags2Spare6Flag,
+        FlaggableFlags2Spare7Flag,
+        FlaggableFlags2Spare8Flag,
+        FlaggableFlags2Spare9Flag,
+        FlaggableFlags2Spare10Flag,
+        FlaggableFlags2Spare11Flag,
+        FlaggableFlags2Spare12Flag,
+        FlaggableFlags2Spare13Flag,
+        FlaggableFlags2Spare14Flag,
+        FlaggableFlags2Spare15Flag]
+    description: Flags to go with our flaggables2 struct
+    divBy: 1.0
+    name: flaggableFlags2
+    type: BITS16
+    unit: Bits
+- {
+    addTo: 0.0,
+    description: Spare US variable,
+    divBy: 1.0,
+    name: zsp9,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Spare US variable,
+    divBy: 1.0,
+    name: zsp8,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Spare US variable,
+    divBy: 1.0,
+    name: zsp7,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: 'Speed of the vehicle over road, through air, or over sea',
+    divBy: 64.0,
+    name: vehicleSpeed,
+    type: UINT16,
+    unit: kph
+}
+- {
+    addTo: 0.0,
+    description: Percent of fueling by Alpha-N (balance by Speed Density),
+    divBy: 640.0,
+    name: blendAlphaNPercent,
+    type: UINT16,
+    unit: '%'
+}
+- {
+    addTo: 0.0,
+    description: AirFlow from Speed Density,
+    divBy: 1.0,
+    name: speedDensityAirFlow,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: AirFlow from Alpha-N,
+    divBy: 1.0,
+    name: alphaNAirFlow,
+    type: UINT16,
+    unit: '#'
+}
+- {
+    addTo: 0.0,
+    description: Migrate to start of all large datalogs once analysed,
+    divBy: 1.0,
+    name: clockInMilliSeconds,
+    type: UINT16,
+    unit: ms
+}
+- {
+    addTo: 0.0,
+    description: Migrate to start of all large datalogs once analysed,
+    divBy: 8.0,
+    name: clock8thMSsInMillis,
+    type: UINT16,
+    unit: ms
+}
+-   addTo: 0.0
+    bitFieldNames: [
+        IgnCutRPM,
+        IgnCutOverBoost,
+        IgnCutLostPLL,
+        IgnCutSelfClock,
+        IgnCutSpare4,
+        IgnCutSpare5,
+        IgnCutSpare6,
+        IgnCutSpare7]
+    description: Which ignition cut limiters are currently active
+    divBy: 1.0
+    name: ignitionLimiterFlags
+    type: BITS8
+    unit: Bits
+-   addTo: 0.0
+    bitFieldNames: [
+        InjCutRPM,
+        InjCutOverBoost,
+        InjCutLostPLL,
+        InjCutSelfClock,
+        InjCutSpare4,
+        InjCutSpare5,
+        InjCutSpare6,
+        InjCutSpare7]
+    description: Which injection cut limiters are currently active
+    divBy: 1.0
+    name: injectionLimiterFlags
+    type: BITS8
+    unit: Bits
+metaData:
+- {
+    key: FIRMWARE_VERSION,
+    value: Example 0.2.0-SNAPSHOT-DEV-Default
+}
+- {
+    key: INTERFACE_VERSION,
+    value: Example 0.0.0 Vanilla
+}
+payloadId: 401
